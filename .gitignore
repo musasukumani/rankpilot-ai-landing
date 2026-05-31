@@ -1,0 +1,10 @@
+.next/
+node_modules/
+.agents/
+
+.env
+.env.*
+!.env.example
+
+*.log
+skills-lock.json
