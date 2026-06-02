@@ -277,6 +277,23 @@ h3 {
   font-size: 0.82rem;
 }
 
+.assurance-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.assurance-list span {
+  border: 1px solid rgba(16, 27, 25, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 254, 253, 0.58);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 8px 12px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -750,6 +767,62 @@ h3 {
   color: var(--muted);
 }
 
+.sample-audit {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+  padding: 108px 0 72px;
+}
+
+.sample-audit > div:first-child p:last-child {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.audit-output {
+  display: grid;
+  gap: 12px;
+}
+
+.audit-output article {
+  border: 1px solid rgba(16, 27, 25, 0.08);
+  border-radius: 8px;
+  background: var(--card);
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.priority {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: rgba(255, 216, 77, 0.28);
+  color: var(--ink);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 6px 9px;
+}
+
+.priority.urgent {
+  background: rgba(255, 129, 95, 0.22);
+}
+
+.priority.quick {
+  background: rgba(57, 221, 155, 0.22);
+}
+
+.audit-output p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 .workflow {
   padding: 106px 0 84px;
   text-align: center;
@@ -854,7 +927,7 @@ h3 {
   display: block;
   margin-bottom: 18px;
   font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size: clamp(1.85rem, 3vw, 2.7rem);
   font-weight: 500;
   line-height: 1;
 }
@@ -871,6 +944,31 @@ h3 {
   background: var(--mint);
   transform: translateY(-4px);
   box-shadow: 0 24px 40px rgba(27, 47, 43, 0.1);
+}
+
+.objection-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.76fr) minmax(460px, 1fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+  padding: 0 0 102px;
+}
+
+.objection-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.objection-grid article {
+  border-top: 1px solid rgba(16, 27, 25, 0.12);
+  padding-top: 18px;
+}
+
+.objection-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.65;
 }
 
 .contact-section {
@@ -1097,6 +1195,8 @@ h3 {
 
   .hero,
   .builder,
+  .sample-audit,
+  .objection-panel,
   .contact-section,
   .pre-footer-cta {
     grid-template-columns: 1fr;
@@ -1159,6 +1259,8 @@ h3 {
   .trust-strip,
   .feature-grid,
   .timeline,
+  .sample-audit,
+  .objection-panel,
   .use-case-grid,
   .pricing-grid,
   .footer-grid {

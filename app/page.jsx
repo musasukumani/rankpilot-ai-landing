@@ -6,7 +6,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [auditResult, setAuditResult] = useState(
-    "Enter a website URL to preview your SEO action plan."
+    "Enter a URL to see the kind of fixes RankPilot will prioritize."
   );
   const [contactResult, setContactResult] = useState(
     "Share a few details and our team will get back to you."
@@ -63,7 +63,7 @@ export default function Home() {
     const website = formData.get("website").toString().trim();
 
     setAuditResult(
-      `Audit queued for ${website}. Preview found metadata, content, local SEO, and AI visibility checks to prioritize.`
+      `Preview queued for ${website}. Example output: 12 technical fixes, 3 keyword gaps, and 4 AI visibility opportunities to review.`
     );
   };
 
@@ -99,26 +99,26 @@ export default function Home() {
 
         <nav className={`nav ${isMenuOpen ? "is-open" : ""}`} data-nav>
           <a href="#features" onClick={closeMenu}>
-            Products
+            Outcomes
           </a>
           <a href="#use-cases" onClick={closeMenu}>
-            Solutions
+            Who it helps
           </a>
           <a href="#pricing" onClick={closeMenu}>
             Pricing
           </a>
           <a href="#contact" onClick={closeMenu}>
-            Resources
+            Demo
           </a>
         </nav>
 
         <div className="header-actions">
-          <a href="#contact">Sign in</a>
+          <a href="#pricing">See pricing</a>
           <a className="button ghost small" href="#contact">
             Request a demo
           </a>
           <a className="button primary small" href="#home">
-            Try it free
+            Run free audit
           </a>
         </div>
       </header>
@@ -126,19 +126,18 @@ export default function Home() {
       <main>
         <section className="hero" id="home">
           <div className="hero-content">
-            <p className="eyebrow">AI SEO software for modern search</p>
+            <p className="eyebrow">AI SEO audits for freelancers, agencies, and local teams</p>
             <h1>
-              Get found on <span className="mark yellow">Google</span> and{" "}
-              <span className="mark coral">AI search</span>
+              Find the SEO fixes and AI search gaps costing your business leads.
             </h1>
             <p className="hero-copy">
-              Audit your website, discover keyword opportunities, improve your
-              content, and see whether AI search engines recommend your brand or
-              your competitors.
+              Run a free website audit in seconds. Get technical fixes, keyword
+              gaps, content priorities, and AI visibility signals before you
+              commit to a plan.
             </p>
 
             <form className="audit-form" onSubmit={handleAuditSubmit}>
-              <label htmlFor="website">Run a sample SEO audit</label>
+              <label htmlFor="website">Start with your free audit</label>
               <div>
                 <input
                   id="website"
@@ -148,11 +147,17 @@ export default function Home() {
                   required
                 />
                 <button className="button primary" type="submit">
-                  Start free audit
+                  Run free audit
                 </button>
               </div>
               <p>{auditResult}</p>
             </form>
+
+            <div className="assurance-list" aria-label="Free audit assurances">
+              <span>No credit card</span>
+              <span>Works with any public website</span>
+              <span>Google and AI search checks</span>
+            </div>
           </div>
 
           <div className="hero-product" aria-label="RankPilot dashboard preview">
@@ -160,42 +165,42 @@ export default function Home() {
               <span></span>
               <span></span>
               <span></span>
-              <strong>Live SEO Command Center</strong>
+              <strong>Free audit preview</strong>
             </div>
             <div className="score-panel">
               <p>SEO Health</p>
               <strong>
                 <span data-count="87">0</span>%
               </strong>
-              <small>12 quick wins found this week</small>
+              <small>12 fixes ranked by impact</small>
             </div>
             <div className="insight-list">
               <article>
                 <span className="status high"></span>
                 <div>
-                  <strong>Missing meta descriptions</strong>
-                  <p>9 pages need clearer search snippets.</p>
+                  <strong>12 technical fixes</strong>
+                  <p>Missing titles, weak snippets, slow pages, and crawl gaps.</p>
                 </div>
               </article>
               <article>
                 <span className="status mid"></span>
                 <div>
-                  <strong>AI visibility gap</strong>
-                  <p>Competitors appear in 4 of 7 answer results.</p>
+                  <strong>4 AI visibility gaps</strong>
+                  <p>Competitors appear in answers where your brand is absent.</p>
                 </div>
               </article>
               <article>
                 <span className="status low"></span>
                 <div>
-                  <strong>Schema opportunity</strong>
-                  <p>Add FAQ and LocalBusiness schema.</p>
+                  <strong>3 keyword opportunities</strong>
+                  <p>Commercial phrases with local intent and realistic difficulty.</p>
                 </div>
               </article>
             </div>
             <div className="keyword-card">
-              <span>Keyword opportunity</span>
-              <strong>"affordable seo tool for small business"</strong>
-              <p>Commercial intent, low-medium difficulty, landing page recommended.</p>
+              <span>Recommended first action</span>
+              <strong>Rewrite service page title and add FAQ schema</strong>
+              <p>Estimated impact: higher click-throughs and better AI answer readiness.</p>
             </div>
             <div className="illustration-loop" aria-hidden="true">
               <span className="road"></span>
@@ -210,15 +215,15 @@ export default function Home() {
         <section className="section trust-strip" aria-label="Product outcomes">
           <article>
             <strong>
-              <span data-count="10">0</span>
+              <span data-count="60">0</span>
             </strong>
-            <span>SEO tools in one workspace</span>
+            <span>seconds to first audit preview</span>
           </article>
           <article>
             <strong>
               <span data-count="42">0</span>
             </strong>
-            <span>average audit checks per page</span>
+            <span>checks across technical and content SEO</span>
           </article>
           <article>
             <strong>
@@ -228,50 +233,47 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="logo-band" aria-label="Trusted by industry leaders">
-          <h2>Trusted by growing teams</h2>
+        <section className="logo-band" aria-label="Built for growth teams">
+          <h2>Built for the people who need SEO wins without SEO busywork.</h2>
           <div>
-            <span>northstar</span>
-            <span>VISA</span>
-            <span>BrightLocal</span>
-            <span>searchly</span>
-            <span>verizon media</span>
+            <span>Freelancers</span>
+            <span>Small agencies</span>
+            <span>Local businesses</span>
+            <span>Content teams</span>
           </div>
         </section>
 
         <section className="section split" id="features">
           <div>
-            <p className="eyebrow">One platform, three jobs</p>
-            <h2>Know what to fix, what to write, and how to get recommended.</h2>
+            <p className="eyebrow">One platform, one weekly growth list</p>
+            <h2>Know what to fix first, what to write next, and where AI search is ignoring you.</h2>
           </div>
           <p>
-            RankPilot AI turns SEO data into a prioritized action plan for
-            freelancers, social media managers, agencies, and growing local
-            businesses.
+            RankPilot AI turns scattered SEO checks into a ranked action plan
+            that a founder, freelancer, or account manager can actually ship.
           </p>
         </section>
 
         <section className="feature-grid" aria-label="AI SEO software features">
           <article className="feature-card featured">
             <span>Website SEO Audit</span>
-            <h3>Find what is stopping your website from ranking in minutes.</h3>
+            <h3>Find the fixes most likely to move rankings and clicks.</h3>
             <p>
-              Scan for weak headings, missing metadata, broken links, slow pages,
-              alt text gaps, duplicate content, mobile issues, internal linking
-              problems, and technical SEO fixes.
+              Scan metadata, headings, links, speed, mobile readiness, duplicate
+              content, image alt text, crawl gaps, and internal linking.
             </p>
           </article>
           <article className="feature-card">
             <span>AI Keyword Research</span>
-            <h3>Discover the exact keywords your customers are searching for.</h3>
+            <h3>Spot keyword gaps your competitors are already using.</h3>
             <p>
-              Get high-intent, long-tail, local, and competitor-gap keywords with
-              difficulty scores, search intent, and suggested content types.
+              Find high-intent, long-tail, local, and competitor-gap phrases with
+              intent, difficulty, and suggested page types.
             </p>
           </article>
           <article className="feature-card">
             <span>Content Optimization</span>
-            <h3>Rewrite pages so search engines and AI tools understand them.</h3>
+            <h3>Rewrite pages so search engines and AI systems understand them.</h3>
             <p>
               Score content for readability, keyword usage, topic coverage,
               headings, FAQs, internal links, CTA strength, and AI answer
@@ -280,15 +282,15 @@ export default function Home() {
           </article>
           <article className="feature-card dark">
             <span>AI Search Visibility</span>
-            <h3>See whether AI search engines recommend you or competitors.</h3>
+            <h3>See whether AI search recommends you or your competitors.</h3>
             <p>
-              Track brand mentions, competitor mentions, cited sources, answer
-              accuracy, and the content improvements needed to earn visibility.
+              Track brand mentions, competitor mentions, cited pages, answer
+              accuracy, and the fixes needed to become easier to cite.
             </p>
           </article>
           <article className="feature-card">
             <span>Competitor Analysis</span>
-            <h3>Find the gaps your competitors are using to win traffic.</h3>
+            <h3>Turn competitor pages into practical next steps.</h3>
             <p>
               Compare top keywords, best pages, backlink strengths, content gaps,
               blog topics, and pages referenced by AI tools.
@@ -296,7 +298,7 @@ export default function Home() {
           </article>
           <article className="feature-card">
             <span>Reports</span>
-            <h3>Send beautiful SEO reports your clients actually understand.</h3>
+            <h3>Send client-ready reports without spreadsheet work.</h3>
             <p>
               Create branded PDF reports, monthly summaries, keyword movement
               reports, website health reports, and AI visibility reports.
@@ -304,9 +306,37 @@ export default function Home() {
           </article>
         </section>
 
+        <section className="section sample-audit" aria-label="Sample audit results">
+          <div>
+            <p className="eyebrow">What the free audit shows</p>
+            <h2>A plain-English action list, not another wall of SEO data.</h2>
+            <p>
+              Every result is grouped by impact, effort, and the conversion path
+              it supports, so you know what to fix before opening another tool.
+            </p>
+          </div>
+          <div className="audit-output" aria-label="Example SEO audit output">
+            <article>
+              <span className="priority urgent">High impact</span>
+              <h3>Homepage title misses the service keyword</h3>
+              <p>Rewrite the title around "AI SEO audit tool" and keep it under 60 characters.</p>
+            </article>
+            <article>
+              <span className="priority">Medium effort</span>
+              <h3>AI answers cite two competitor guides</h3>
+              <p>Add a comparison section and FAQ schema to make the page easier to reference.</p>
+            </article>
+            <article>
+              <span className="priority quick">Quick win</span>
+              <h3>Three service pages have weak meta descriptions</h3>
+              <p>Replace generic snippets with outcome-led copy and a clear visitor action.</p>
+            </article>
+          </div>
+        </section>
+
         <section className="section workflow">
           <p className="eyebrow">How it works</p>
-          <h2>From website URL to weekly action plan.</h2>
+          <h2>From website URL to prioritized SEO work.</h2>
           <div className="timeline">
             <article>
               <span>01</span>
@@ -316,12 +346,12 @@ export default function Home() {
             <article>
               <span>02</span>
               <h3>Prioritize</h3>
-              <p>Turn findings into high-priority fixes, quick wins, and ranking opportunities.</p>
+              <p>Rank each finding by impact, effort, and how close it sits to revenue.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Create</h3>
-              <p>Generate human-editable briefs, outlines, landing pages, FAQs, and meta tags.</p>
+              <h3>Fix</h3>
+              <p>Generate editable briefs, page updates, FAQs, titles, snippets, and schema.</p>
             </article>
             <article>
               <span>04</span>
@@ -334,18 +364,18 @@ export default function Home() {
         <section className="section use-cases" id="use-cases">
           <div className="section-heading">
             <p className="eyebrow">Built for practical growth</p>
-            <h2>Useful whether you sell SEO or just need more leads.</h2>
+            <h2>Useful whether you sell SEO or need more leads from your own site.</h2>
           </div>
           <div className="use-case-grid">
             <article>
-              <h3>Small businesses</h3>
+              <h3>Local businesses</h3>
               <p>
-                Get found by customers searching in your area with local keywords,
-                review responses, NAP checks, and "near me" tracking.
+                Find local search gaps, weak service pages, missing schema, and
+                "near me" opportunities without hiring a full SEO team.
               </p>
             </article>
             <article>
-              <h3>Marketing agencies</h3>
+              <h3>Small agencies</h3>
               <p>
                 Automate audits, content briefs, competitor research, and
                 white-label client reports across multiple websites.
@@ -384,29 +414,29 @@ export default function Home() {
         <section className="section pricing" id="pricing">
           <div className="section-heading">
             <p className="eyebrow">Pricing</p>
-            <h2>Start with a free audit. Grow when the work gets serious.</h2>
+            <h2>Start with a free audit. Upgrade when you want the full weekly action plan.</h2>
           </div>
           <div className="pricing-grid">
             <article>
               <span>Free</span>
               <strong>$0</strong>
-              <p>1 website audit, 5 keyword ideas, and a basic SEO score.</p>
+              <p>1 audit preview, 5 keyword ideas, 3 priority fixes, and a basic SEO score.</p>
               <a className="button ghost" href="#home">
-                Try free
+                Run free audit
               </a>
             </article>
             <article className="popular">
               <span>Starter</span>
-              <strong>$19</strong>
-              <p>Website audits, keyword research, content suggestions, and weekly task lists.</p>
+              <strong>$19/mo</strong>
+              <p>Best for freelancers: 1 website, weekly audits, keyword research, and task lists.</p>
               <a className="button primary" href="#contact">
                 Start Starter
               </a>
             </article>
             <article>
               <span>Pro</span>
-              <strong>$49</strong>
-              <p>Competitor tracking, AI visibility tracking, reports, and content briefs.</p>
+              <strong>$49/mo</strong>
+              <p>Best for small teams: 5 websites, competitor tracking, AI visibility, and reports.</p>
               <a className="button ghost" href="#contact">
                 Go Pro
               </a>
@@ -414,7 +444,7 @@ export default function Home() {
             <article>
               <span>Agency</span>
               <strong>Custom</strong>
-              <p>White-label reports, multiple clients, team access, and branded exports.</p>
+              <p>Best for client work: white-label reports, multiple clients, team access, and exports.</p>
               <a className="button ghost" href="#contact">
                 Talk to sales
               </a>
@@ -422,10 +452,31 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section objection-panel" aria-label="Common objections">
+          <div>
+            <p className="eyebrow">Questions before you try it</p>
+            <h2>Built to reduce risk before asking for money.</h2>
+          </div>
+          <div className="objection-grid">
+            <article>
+              <h3>Do I need technical SEO knowledge?</h3>
+              <p>No. RankPilot explains what to change, why it matters, and which page to update first.</p>
+            </article>
+            <article>
+              <h3>Will this replace my SEO tool?</h3>
+              <p>It can for basic audits. Agencies can also use it as a faster triage layer before deeper tools.</p>
+            </article>
+            <article>
+              <h3>What happens after the free audit?</h3>
+              <p>You get a preview of the most useful fixes. Paid plans unlock ongoing tracking and reporting.</p>
+            </article>
+          </div>
+        </section>
+
         <section className="section contact-section" id="contact">
           <div className="contact-copy">
             <p className="eyebrow">Contact us</p>
-            <h2>Talk to us about your SEO growth plan.</h2>
+            <h2>Want help turning the audit into a growth plan?</h2>
             <p>
               Send your details and we will help you choose the right audit,
               reporting, or AI visibility workflow for your business.
@@ -480,13 +531,13 @@ export default function Home() {
         <section className="pre-footer-cta">
           <div>
             <h2>Know what to fix first</h2>
-            <p>Start with a free AI SEO audit in minutes.</p>
+            <p>Run the free audit and get your first prioritized SEO action list.</p>
           </div>
           <div>
-            <a className="button dark" href="mailto:hello@example.com">
-              Sign up
+            <a className="button dark" href="#home">
+              Run free audit
             </a>
-            <a className="button ghost" href="mailto:hello@example.com">
+            <a className="button ghost" href="#contact">
               Request a demo
             </a>
           </div>

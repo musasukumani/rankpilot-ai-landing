@@ -1,9 +1,9 @@
 import "../styles.css";
 
 export const metadata = {
-  title: "RankPilot AI | AI SEO Software",
+  title: "RankPilot AI | Free AI SEO Audit Tool",
   description:
-    "RankPilot AI audits websites, finds keyword opportunities, optimizes content, and tracks visibility in Google and AI search.",
+    "Run a free AI SEO audit, find technical fixes, keyword gaps, content priorities, and visibility opportunities across Google and AI search.",
 };
 
 export default function RootLayout({ children }) {
